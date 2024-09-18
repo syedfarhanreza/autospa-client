@@ -1,22 +1,20 @@
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
-import { useAppSelector } from "@/redux/hooks";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { CiUser } from "react-icons/ci";
 import { Link, NavLink } from "react-router-dom";
-import UpcomingSlotCountdown from "./UpcomingSlotCountdown";
 
 const navLinks = [
   {
-    lebel: "Home",
+    label: "Home",
     href: "/",
   },
   {
-    lebel: "Services",
+    label: "Services",
     href: "/services",
   },
   {
-    lebel: "Testimonials",
+    label: "Testimonials",
     href: "/testimonials",
   },
 ];
@@ -24,21 +22,19 @@ const navLinks = [
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
-  const { user } = useAppSelector((state) => state.auth);
-
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
-      // event target
+      //! event target
       const target = event.target as HTMLElement;
-      // screent width
+      //! screen width
       const screen = window.screen.width;
 
-      // ---**** return if the screen width is larger
+      //! return if the screen width is larger
       if (screen > 1024) {
         return;
       }
 
-      // return if the user click on the drawer or the navbar
+      //! return if the user click on the drawer or the navbar
       if (target.closest(".myDrawer") || target.closest(".menuBTn")) {
         return;
       }
@@ -68,7 +64,7 @@ const Navbar = () => {
             </Link>
             <div className="center w-fit gap-[15px] pt-[0] pb-[10px]">
               <div className="hidden lg:flex">
-                {navLinks.map(({ href, lebel }, i) => (
+                {navLinks.map(({ href, label }, i) => (
                   <Link
                     key={i}
                     to={href}
@@ -77,7 +73,7 @@ const Navbar = () => {
                       " !bg-transparent !text-white font-[700] py-[0]"
                     }
                   >
-                    {lebel}
+                    {label}
                   </Link>
                 ))}
               </div>
@@ -97,7 +93,6 @@ const Navbar = () => {
                   Login <CiUser />
                 </Link>
               )}
-              <UpcomingSlotCountdown />
               <button
                 onClick={() => setShowSidebar(!showSidebar)}
                 className="md:hidden flex menuBTn"
@@ -119,7 +114,7 @@ const Navbar = () => {
                 <img src="/images/logo.png" className="w-[120px]" />
               </Link>
               <div className="w-full flex flex-col mt-[20px]">
-                {navLinks.map(({ href, lebel }) => (
+                {navLinks.map(({ href, label }) => (
                   <NavLink
                     to={href}
                     className={({ isActive }) =>
@@ -130,7 +125,7 @@ const Navbar = () => {
                       }  w-full px-[15px] py-[8px] rounded-[5px]`
                     }
                   >
-                    {lebel}
+                    {label}
                   </NavLink>
                 ))}
               </div>

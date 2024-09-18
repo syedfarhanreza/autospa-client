@@ -1,0 +1,7 @@
+import HomeView from "@/view/HomeView";
+
+const Home = () => {
+  return <HomeView />;
+};
+
+export default Home;
