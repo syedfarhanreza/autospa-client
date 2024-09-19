@@ -1,10 +1,13 @@
+import FeaturedServices from "@/components/home/FeaturedServices";
 import HeroSection from "@/components/home/HeroSection";
+import Reviews from "@/components/home/Reviews";
 
 const HomeView = () => {
   return (
     <>
       <HeroSection />
-      <div className="mx-auto layout_container"></div>
+      <FeaturedServices />
+      <Reviews />
     </>
   );
 };
