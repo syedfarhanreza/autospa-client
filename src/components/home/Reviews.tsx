@@ -5,9 +5,6 @@ import {
   useCreateReviewMutation,
   useGetReviewsQuery,
 } from "@/redux/features/review/review.api";
-import { useAppSelector } from "@/redux/hooks";
-import { IReview } from "@/types/review";
-import { getRatingCounts } from "@/utils/getRetingCount";
 import { formatDistanceToNow } from "date-fns";
 import { Star } from "lucide-react";
 import { FormEvent, useState } from "react";
@@ -18,6 +15,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
+import { useAppSelector } from "@/redux/hook";
+import { getRatingCounts } from "@/utils/getRatingCounts";
+import { IReview } from "@/types/review";
 const RatingBar = ({ data }: { data: IReview[] }) => {
   const review = getRatingCounts(data);
   return (
