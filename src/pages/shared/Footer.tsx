@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer
-      className="bg-muted py-12 w-full carbon_fiber"
+      className="bg-black py-12 w-full"
       style={{ clipPath: "polygon(0 8%, 100% 1%, 100% 100%, 0% 100%)" }}
     >
       <div className="container max-w-5xl mx-auto flex flex-col items-center gap-8 text-center">

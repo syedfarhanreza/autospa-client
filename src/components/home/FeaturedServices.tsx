@@ -27,7 +27,7 @@ const FeaturedServices = () => {
     });
   }, [api]);
   return (
-    <div className="w-full carbon_fiber py-[70px] px-[20px]">
+    <div className="w-full bg-black py-[70px] px-[20px]">
       <SectionHeading
         description="Top 6 popular offer to chose from use. Best featured services"
         heading="Our top featured services"
@@ -70,7 +70,7 @@ const FeaturedServices = () => {
                 <div className="w-full md:w-1/2 p-8">
                   <h2 className="text-2xl font-bold mb-4">{data.name}</h2>
                   <div className="flex items-center mb-4">
-                    <ClockIcon className="h-5 w-5 text-red-500" />
+                    <ClockIcon className="h-5 w-5 text-black-500" />
                     <span className="ml-2 text-gray-700">
                       {data.duration} min
                     </span>
@@ -98,7 +98,7 @@ const FeaturedServices = () => {
                       <span className="ml-2 text-gray-700">Window wiping</span>
                     </li>
                   </ul>
-                  <Button className="bg-red-500 text-white px-6 py-3 rounded-full">
+                  <Button className="bg-primaryMat hover:bg-black hover:text-primaryMat hover:border-4 hover:border-primaryMat text-black font-bold px-6 py-3 rounded-full">
                     Add to Compare
                     <ArrowRightIcon className="ml-2 h-5 w-5" />
                   </Button>
