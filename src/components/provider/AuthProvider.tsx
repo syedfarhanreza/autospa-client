@@ -1,7 +1,7 @@
 "use client";
 import { useGetAuthorQuery } from "@/redux/features/auth/auth.api";
 import { setLoading, setUser } from "@/redux/features/auth/auth.slice";
-import { useAppSelector } from "@/redux/hooks";
+import { useAppSelector } from "@/redux/hook";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 const AuthProvider = ({ children }: { children: React.ReactNode }) => {

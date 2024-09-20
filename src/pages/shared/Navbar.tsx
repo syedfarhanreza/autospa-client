@@ -1,4 +1,5 @@
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+import { useAppSelector } from "@/redux/hook";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { CiUser } from "react-icons/ci";
@@ -21,6 +22,8 @@ const navLinks = [
 
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
+
+  const { user } = useAppSelector((state) => state.auth);
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
@@ -81,14 +84,14 @@ const Navbar = () => {
               {user ? (
                 <Link
                   to={`/dashboard/${user.role == "admin" ? "admin" : "user"}`}
-                  className="text-[15px] text-white bg-primaryMat px-[10px] py-[5px] center rounded-full gap-[3px]"
+                  className="text-[15px] text-black bg-primaryMat px-[10px] py-[5px] center rounded-full gap-[3px]"
                 >
                   <CiUser /> Dashboard
                 </Link>
               ) : (
                 <Link
                   to={"/login"}
-                  className="px-[18px] py-[5px] bg-primaryMat text-white rounded-full center gap-[10px]"
+                  className="px-[18px] py-[5px] bg-primaryMat text-black rounded-full center gap-[10px]"
                 >
                   Login <CiUser />
                 </Link>
