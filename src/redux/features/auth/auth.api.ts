@@ -1,5 +1,6 @@
 import { api } from "@/redux/api/api";
-import { TUser } from "@/types/user";
+import { TRole, TUser } from "@/types/user";
+
 const userApi = api.injectEndpoints({
   endpoints: (builder) => ({
     // Create blog post
@@ -16,6 +17,14 @@ const userApi = api.injectEndpoints({
         url: "/auth/login",
         method: "POST",
         body: post,
+      }),
+      invalidatesTags: ["user"],
+    }),
+    changeRole: builder.mutation({
+      query: (post: { id: string; role: TRole }) => ({
+        url: `/auth/update-role/${post.id}`,
+        method: "PUT",
+        body: { role: post.role },
       }),
       invalidatesTags: ["user"],
     }),
@@ -46,4 +55,5 @@ export const {
   useLoginUserMutation,
   useGetAuthorQuery,
   useResetPasswordMutation,
+  useChangeRoleMutation,
 } = userApi;

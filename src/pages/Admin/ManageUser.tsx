@@ -1,4 +1,3 @@
-import ChangeUserRole from "@/components/ManageUser/ChangeUserRole";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,11 +19,12 @@ import {
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import { useGetAllUserQuery } from "@/redux/features/auth/user.api";
-import { useAppSelector } from "@/redux/hooks";
-import NotFound from "@/utils/NotFound";
+import { useAppSelector } from "@/redux/hook";
 import { formatDistanceToNow } from "date-fns";
 import { ListOrderedIcon, SearchIcon } from "lucide-react";
 import { useState } from "react";
+import NotFound from "../shared/NotFound";
+import ChangeUserRole from "@/components/ManageUser/ChangeUserRole";
 
 const ManageUser = () => {
   const [page, setCurrentPage] = useState(1);
