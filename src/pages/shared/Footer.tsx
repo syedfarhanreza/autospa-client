@@ -8,11 +8,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer
-      className="bg-black py-12 w-full"
-      style={{ clipPath: "polygon(0 8%, 100% 1%, 100% 100%, 0% 100%)" }}
-    >
-      <div className="container max-w-5xl mx-auto flex flex-col items-center gap-8 text-center">
+    <footer className="bg-black py-12 w-full">
+      <div className="bg-gray-950 max-w-full mx-auto flex flex-col items-center gap-8 text-center py-10">
         <div className="flex items-center gap-2">
           <img className="w-[130px]" src={"/images/logo.png"} />
         </div>
@@ -30,7 +27,7 @@ const Footer = () => {
             <p className="text-white">
               Phone: (123) 456-7890
               <br />
-              Email: info@acme.com
+              Email: info@autospa.com
             </p>
           </div>
           <div>
@@ -83,7 +80,7 @@ const Footer = () => {
           </Link>
         </div>
         <p className="text-xs text-white">
-          &copy; 2024 Acme Inc. All rights reserved.
+          &copy; 2024 AutoSpa. All rights reserved.
         </p>
       </div>
     </footer>

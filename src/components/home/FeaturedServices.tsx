@@ -45,7 +45,7 @@ const FeaturedServices = () => {
         <CarouselContent>
           {serviceData.map((data) => (
             <CarouselItem>
-              <div className="flex layout_container !px-[0] mx-auto bg-white rounded-lg shadow-lg overflow-hidden md:flex-row flex-col">
+              <div className="flex layout_container !px-[0] mx-auto bg-gray-900 rounded-lg shadow-lg overflow-hidden md:flex-row flex-col">
                 <div className="w-full md:w-1/2 relative">
                   <img
                     src={data.image}
@@ -68,34 +68,32 @@ const FeaturedServices = () => {
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 p-8">
-                  <h2 className="text-2xl font-bold mb-4">{data.name}</h2>
+                  <h2 className="text-2xl font-bold text-primaryMat mb-4">
+                    {data.name}
+                  </h2>
                   <div className="flex items-center mb-4">
-                    <ClockIcon className="h-5 w-5 text-black-500" />
-                    <span className="ml-2 text-gray-700">
-                      {data.duration} min
-                    </span>
+                    <ClockIcon className="h-5 w-5 text-primaryMat" />
+                    <span className="ml-2 text-white">{data.duration} min</span>
                   </div>
-                  <p className="text-gray-600 mb-6">{data.description}</p>
+                  <p className="text-white mb-6">{data.description}</p>
                   <ul className="space-y-2 mb-6">
                     <li className="flex items-center">
                       <CheckIcon className="h-5 w-5 text-green-500" />
-                      <span className="ml-2 text-gray-700">Seats washing</span>
+                      <span className="ml-2 text-white">Seats washing</span>
                     </li>
                     <li className="flex items-center">
                       <CheckIcon className="h-5 w-5 text-green-500" />
-                      <span className="ml-2 text-gray-700">
-                        Vacuum cleaning
-                      </span>
+                      <span className="ml-2 text-white">Vacuum cleaning</span>
                     </li>
                     <li className="flex items-center">
                       <CheckIcon className="h-5 w-5 text-green-500" />
-                      <span className="ml-2 text-gray-700">
+                      <span className="ml-2 text-white">
                         Interior wet cleaning
                       </span>
                     </li>
                     <li className="flex items-center">
                       <CheckIcon className="h-5 w-5 text-green-500" />
-                      <span className="ml-2 text-gray-700">Window wiping</span>
+                      <span className="ml-2 text-white">Window wiping</span>
                     </li>
                   </ul>
                   <Button className="bg-primaryMat hover:bg-black hover:text-primaryMat hover:border-4 hover:border-primaryMat text-black font-bold px-6 py-3 rounded-full">

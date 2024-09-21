@@ -31,9 +31,7 @@ const RatingBar = ({ data }: { data: IReview[] }) => {
               style={{ width: `${(count / review.length) * 100}%` }}
             />
           </div>
-          <div className="w-20 text-sm text-muted-foreground">
-            {count} reviews
-          </div>
+          <div className="w-20 text-sm">{count} reviews</div>
         </div>
       ))}
     </>
@@ -82,15 +80,17 @@ const Review = ({
           </AvatarFallback>
         </Avatar>
         <div>
-          <div className="font-semibold">{name}</div>
-          <div className="text-sm text-muted-foreground">{dateTime}</div>
+          <div className="font-semibold text-white">{name}</div>
+          <div className="text-sm text-muted-foreground text-white">
+            {dateTime}
+          </div>
         </div>
         <div className="ml-auto flex items-center">
           <StarRating rating={rating} />
-          <span className="ml-2 font-semibold">{rating}.0</span>
+          <span className="ml-2 font-semibold text-white">{rating}.0</span>
         </div>
       </div>
-      <p className="mb-4">{comment}</p>
+      <p className="mb-4 text-white">{comment}</p>
     </div>
   );
 };
@@ -139,17 +139,17 @@ export default function Component() {
   const avgRating = (rating / totalCount).toFixed(2);
   return (
     <section
-      className="layout_container py-[40px] flex md:flex-row flex-col gap-[20px]"
+      className="layout_container bg-black py-[40px] flex md:flex-row flex-col gap-[20px]"
       id="review"
     >
-      <Card className="w-full">
-        <CardHeader>
-          <CardTitle>Reviews</CardTitle>
+      <Card className="w-full bg-gray-950 p-4">
+        <CardHeader className="bg-gray-950">
+          <CardTitle className="text-white">Reviews</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="flex items-start gap-8 mb-8">
-            <h2 className="text-5xl font-bold">{avgRating}</h2>
-            <div className="flex-1">
+          <div className="flex bg-gray-950items-start gap-8 mb-8">
+            <h2 className="text-5xl text-white font-bold">{avgRating}</h2>
+            <div className="flex-1 text-white">
               <RatingBar data={data?.data || []} />
             </div>
           </div>
@@ -165,14 +165,14 @@ export default function Component() {
           ))}
           <Link
             to={"/testimonials"}
-            className="mt-4 mx-auto text-primary text-center hover:underline center gap-[5px]"
+            className="mt-4 mx-auto text-white text-center hover:underline center gap-[5px]"
           >
             Read all reviews <MdArrowRight />
           </Link>
         </CardContent>
       </Card>
-      <div className="bg-muted px-6 py-8 sm:px-10 sm:py-10 md:w-[40%] w-full">
-        <h3 className="text-xl font-bold mb-4">Write a Review</h3>
+      <div className="bg-gray-950  border-2 border-gray-200  px-6 py-8 sm:px-10 sm:py-10 md:w-[40%] w-full">
+        <h3 className="text-xl text-white font-bold mb-4">Write a Review</h3>
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <RatingJsx
             className="text-[30px]"
@@ -191,7 +191,10 @@ export default function Component() {
               name="feedback"
             />
           </div>
-          <Button type="submit" className="justify-self-end bg-primaryMat">
+          <Button
+            type="submit"
+            className="justify-self-end font-bold text-black bg-primaryMat hover:bg-black hover:text-primaryMat hover:border-2 hover:border-primaryMat"
+          >
             Submit Review
           </Button>
         </form>
