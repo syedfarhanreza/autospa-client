@@ -8,7 +8,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useChangeRoleMutation } from "@/redux/features/auth/auth.api";
-import { useAppSelector } from "@/redux/hooks";
+import { useAppSelector } from "@/redux/hook";
 import { TRole } from "@/types/user";
 import { toast } from "sonner";
 const ChangeUserRole = ({ role, id }: { role: string; id: string }) => {
@@ -16,13 +16,13 @@ const ChangeUserRole = ({ role, id }: { role: string; id: string }) => {
   const [changeRole] = useChangeRoleMutation();
 
   const handleChangeRole = async (updateRole: TRole) => {
-    const toasId = toast.loading("Please wati...");
+    const toastId = toast.loading("Please wait...!!!");
     try {
       await changeRole({ id, role: updateRole });
-      toast.dismiss(toasId);
+      toast.dismiss(toastId);
       toast.success(`Successfully updated user role to ${updateRole}`);
     } catch (error) {
-      toast.dismiss(toasId);
+      toast.dismiss(toastId);
       toast.error("Something went wrong while making this request");
     }
   };

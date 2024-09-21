@@ -7,7 +7,7 @@ import {
   useUpdateUserImageMutation,
   useUpdateUserInfoMutation,
 } from "@/redux/features/auth/user.api";
-import { useAppSelector } from "@/redux/hooks";
+import { useAppSelector } from "@/redux/hook";
 import { TUser } from "@/types/user";
 import { local_img_url } from "@/utils/localImageURL";
 import { ErrorMessage, Field, Form, Formik } from "formik";

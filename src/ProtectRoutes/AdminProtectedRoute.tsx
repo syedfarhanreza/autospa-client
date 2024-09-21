@@ -1,4 +1,4 @@
-import { useAppSelector } from "@/redux/hooks";
+import { useAppSelector } from "@/redux/hook";
 import Cookies from "js-cookie";
 import { ReactNode } from "react";
 import { useLocation, useNavigate } from "react-router-dom";

@@ -1,4 +1,6 @@
 import authReducer from "@/redux/features/auth/auth.slice";
+import bookingReducer from "@/redux/features/booking/booking.slice";
+import comparisonReducer from "@/redux/features/service/serviceComparison.slice";
 import { configureStore } from "@reduxjs/toolkit";
 import {
   FLUSH,
@@ -22,8 +24,10 @@ const persistAuthReducer = persistReducer(
 );
 const store = configureStore({
   reducer: {
-    auth: persistAuthReducer,
     [api.reducerPath]: api.reducer,
+    comparison: comparisonReducer,
+    auth: persistAuthReducer,
+    booking: bookingReducer,
   },
 
   middleware: (getDefaultMiddleware) =>

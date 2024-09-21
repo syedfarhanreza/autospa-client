@@ -1,6 +1,6 @@
 import { useRegisterCustomerMutation } from "@/redux/features/auth/auth.api";
 import { setToken, setUser } from "@/redux/features/auth/auth.slice";
-import { useAppDispatch } from "@/redux/hooks";
+import { useAppDispatch } from "@/redux/hook";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import Cookies from "js-cookie";
 import { Link, useNavigate } from "react-router-dom";

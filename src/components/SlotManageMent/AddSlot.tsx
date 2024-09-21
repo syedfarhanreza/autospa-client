@@ -22,13 +22,13 @@ import {
 } from "@/components/ui/select";
 import { useGetServiceNamesQuery } from "@/redux/features/service/service.api";
 import { useCreateSlotMutation } from "@/redux/features/slots/slots.api";
-import { formateDateString } from "@/utils/dateFormat";
 import { format } from "date-fns";
 import { CalendarDaysIcon } from "lucide-react";
 import { FormEvent, useState } from "react";
 import { toast } from "sonner";
 import { Button } from "../ui/button";
 import { Calendar } from "../ui/calendar";
+import { formateDateString } from "@/utils/dataFormat";
 const times = [
   "01:00",
   "02:00",

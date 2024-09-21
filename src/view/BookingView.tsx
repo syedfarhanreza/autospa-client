@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useCreateBookingMutation } from "@/redux/features/booking/booking.api";
 import { useGetSlotByIdQuery } from "@/redux/features/slots/slots.api";
-import { useAppSelector } from "@/redux/hooks";
+import { useAppSelector } from "@/redux/hook";
 import { IBooking } from "@/types/booking";
 import { format } from "date-fns";
 import { useFormik } from "formik";
