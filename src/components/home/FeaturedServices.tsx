@@ -43,8 +43,8 @@ const FeaturedServices = () => {
         className="mt-[20px]"
       >
         <CarouselContent>
-          {serviceData.map((data) => (
-            <CarouselItem>
+          {serviceData?.map((data) => (
+            <CarouselItem key={data.id}>
               <div className="flex layout_container !px-[0] mx-auto bg-gray-900 rounded-lg shadow-lg overflow-hidden md:flex-row flex-col">
                 <div className="w-full md:w-1/2 relative">
                   <img
