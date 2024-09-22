@@ -206,15 +206,15 @@ const Register = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-primaryMat text-white py-[12px]  hover:bg-green-600 rounded-[5px]"
+                className="w-full  py-[12px] rounded-[5px] font-bold bg-primaryMat border-2 border-black hover:bg-black hover:border-2 hover:border-primaryMat hover:text-primaryMat"
               >
-                Submit & Register
+                Register
               </button>
             </Form>
           )}
         </Formik>
         <div className="mt-6 text-start">
-          <p className="text-gray-700">
+          <p className="text-white">
             Already have an account?{" "}
             <Link to="/login" className="text-primaryMat">
               Login
@@ -222,7 +222,7 @@ const Register = () => {
           </p>
         </div>
 
-        <p className="mt-4 text-gray-600 text-sm text-start">
+        <p className="mt-4 text-white text-sm text-start">
           Note: Your personal data will be used to support your experience
           throughout this website, to manage access to your account, and for
           other purposes described in our privacy policy.

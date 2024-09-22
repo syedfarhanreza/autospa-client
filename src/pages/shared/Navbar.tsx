@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { CiUser } from "react-icons/ci";
 import { Link, NavLink } from "react-router-dom";
+import UpcomingSlotCountdown from "./UpcomingSlotCountdown";
 
 const navLinks = [
   {
@@ -91,11 +92,12 @@ const Navbar = () => {
               ) : (
                 <Link
                   to={"/login"}
-                  className="px-[18px] py-[5px] bg-primaryMat text-black rounded-full center gap-[10px]"
+                  className="px-[18px] py-[5px] bg-primaryMat text-black font-bold rounded-full center gap-[10px]"
                 >
                   Login <CiUser />
                 </Link>
               )}
+              <UpcomingSlotCountdown />
               <button
                 onClick={() => setShowSidebar(!showSidebar)}
                 className="md:hidden flex menuBTn"

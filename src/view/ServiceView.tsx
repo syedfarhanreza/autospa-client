@@ -76,11 +76,11 @@ const ServiceView = () => {
   }
 
   return (
-    <div className="layout_container mx-auto px-4 py-8 sm:px-6 md:py-12 min-h-[100vh]">
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-[250px_1fr] ">
-        <div className="space-y-6">
+    <div className="layout_container text-white bg-black mx-auto px-4 py-8 sm:px-6 md:py-12 min-h-[100vh]">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-[250px_1fr]">
+        <div className="space-y-6 bg-gray-900 p-10 rounded-md">
           <div>
-            <h3 className="mb-2 text-lg font-medium">Search</h3>
+            <h3 className="mb-2 text-lg font-medium ">Search</h3>
             <Input
               type="text"
               placeholder="Search products..."
@@ -89,7 +89,7 @@ const ServiceView = () => {
           </div>
 
           <div>
-            <h3 className="mb-2 text-lg font-medium">Price Range</h3>
+            <h3 className="mb-2 text-lg font-medium text-white">Price Range</h3>
             <div />
             <div className="w-full flex-col gap-[10px]">
               <div className="mt-2 center gap-[5px]">
@@ -109,7 +109,7 @@ const ServiceView = () => {
                 />
               </div>
               <Button
-                className="w-full bg-primaryMat text-black mt-[10px]"
+                className="w-full text-black font-bold bg-primaryMat border-2 border-black hover:bg-black hover:border-2 hover:border-primaryMat hover:text-primaryMat mt-[10px]"
                 onClick={() => setPriceRange(priceInputState)}
               >
                 Add
@@ -117,7 +117,11 @@ const ServiceView = () => {
             </div>
           </div>
 
-          <Button variant="outline" onClick={handleClearFilters}>
+          <Button
+            variant="outline"
+            className="text-black"
+            onClick={handleClearFilters}
+          >
             Clear Filters
           </Button>
         </div>

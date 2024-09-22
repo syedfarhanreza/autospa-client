@@ -1,3 +1,4 @@
+import AdminDashboardLayout from "@/components/Layouts/AdminDashboardLayout";
 import MainLayout from "@/components/Layouts/MainLayouts";
 import NotFound from "@/pages/shared/NotFound";
 import UserDashboardLayout from "@/components/Layouts/UserDashboardLayout";
@@ -8,7 +9,6 @@ import { authRoutes } from "./auth.route";
 import { pageRoutes } from "./pages.route";
 import { userRoutes } from "./user.route";
 import AuthLayout from "@/components/Layouts/AuthLayouts";
-import AdminDashboardLayout from "@/components/Layouts/AdminDashboardLayout";
 import UserProtectedRoutes from "@/ProtectRoutes/UserProtectRoute";
 const router = createBrowserRouter([
   {
