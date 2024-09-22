@@ -1,4 +1,6 @@
-import { serviceData } from "@/mock/service";
+import SectionHeading from "@/components/ui/sectionHeading";
+import { serviceData, TFeaturedService } from "@/mock/service";
+import { addServiceToCompare } from "@/redux/features/service/serviceComparison.slice";
 import Autoplay from "embla-carousel-autoplay";
 import { ArrowRightIcon, CheckIcon, ClockIcon } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -11,21 +13,27 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../ui/carousel";
-import SectionHeading from "../ui/sectionHeading";
+import { useAppDispatch, useAppSelector } from "@/redux/hook";
+
 const FeaturedServices = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+  const dispatch = useAppDispatch();
+
+  const { selectedServices } = useAppSelector((state) => state.comparison);
+
   useEffect(() => {
-    if (!api) {
-      return;
-    }
+    if (!api) return;
+
     setCount(api.scrollSnapList().length);
     setCurrent(api.selectedScrollSnap() + 1);
+
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
+
   return (
     <div className="w-full bg-black py-[70px] px-[20px]">
       <SectionHeading
@@ -43,9 +51,9 @@ const FeaturedServices = () => {
         className="mt-[20px]"
       >
         <CarouselContent>
-          {serviceData?.map((data) => (
-            <CarouselItem key={data.id}>
-              <div className="flex layout_container !px-[0] mx-auto bg-gray-900 rounded-lg shadow-lg overflow-hidden md:flex-row flex-col">
+          {serviceData.map((data: TFeaturedService) => (
+            <CarouselItem key={data.name}>
+              <div className="flex layout_container !px-[0] mx-auto  bg-gray-950 rounded-lg shadow-lg overflow-hidden md:flex-row flex-col">
                 <div className="w-full md:w-1/2 relative">
                   <img
                     src={data.image}
@@ -68,7 +76,7 @@ const FeaturedServices = () => {
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 p-8">
-                  <h2 className="text-2xl font-bold text-primaryMat mb-4">
+                  <h2 className="text-2xl text-white font-bold mb-4">
                     {data.name}
                   </h2>
                   <div className="flex items-center mb-4">
@@ -78,26 +86,35 @@ const FeaturedServices = () => {
                   <p className="text-white mb-6">{data.description}</p>
                   <ul className="space-y-2 mb-6">
                     <li className="flex items-center">
-                      <CheckIcon className="h-5 w-5 text-green-500" />
+                      <CheckIcon className="h-5 w-5 text-primaryMat" />
                       <span className="ml-2 text-white">Seats washing</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckIcon className="h-5 w-5 text-green-500" />
+                      <CheckIcon className="h-5 w-5 text-primaryMat" />
                       <span className="ml-2 text-white">Vacuum cleaning</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckIcon className="h-5 w-5 text-green-500" />
+                      <CheckIcon className="h-5 w-5 text-primaryMat" />
                       <span className="ml-2 text-white">
                         Interior wet cleaning
                       </span>
                     </li>
                     <li className="flex items-center">
-                      <CheckIcon className="h-5 w-5 text-green-500" />
+                      <CheckIcon className="h-5 w-5 text-primaryMat" />
                       <span className="ml-2 text-white">Window wiping</span>
                     </li>
                   </ul>
-                  <Button className="bg-primaryMat hover:bg-black hover:text-primaryMat hover:border-4 hover:border-primaryMat text-black font-bold px-6 py-3 rounded-full">
-                    Add to Compare
+                  <Button
+                    className={`${
+                      selectedServices.includes(data)
+                        ? "bg-lime-400 hover:border-2 hover:border-lime-400"
+                        : "bg-primaryMat hover:bg-black hover:border-2 hover:border-primaryMat"
+                    } text-black hover:text-primaryMat font-bold px-6 py-3 rounded-full`}
+                    onClick={() => dispatch(addServiceToCompare(data))}
+                  >
+                    {selectedServices.includes(data)
+                      ? "Remove from Compare"
+                      : "Add to Compare"}
                     <ArrowRightIcon className="ml-2 h-5 w-5" />
                   </Button>
                 </div>
@@ -109,4 +126,5 @@ const FeaturedServices = () => {
     </div>
   );
 };
+
 export default FeaturedServices;

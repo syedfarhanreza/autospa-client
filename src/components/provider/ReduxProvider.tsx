@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { Toaster } from "sonner";
 import AuthProvider from "./AuthProvider";
+
 const ReduxProvider = ({ children }: { children: React.ReactNode }) => {
   return (
     <Provider store={store}>
@@ -14,4 +15,5 @@ const ReduxProvider = ({ children }: { children: React.ReactNode }) => {
     </Provider>
   );
 };
+
 export default ReduxProvider;

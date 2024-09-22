@@ -68,24 +68,29 @@ const Login = () => {
     }
   };
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-[15px]">
-      <div className="flex items-start justify-center flex-col gap-[50px] shadow-lg rounded-[12px] overflow-hidden p-[20px]">
+    <div className="min-h-screen flex flex-col items-center justify-center px-[15px] bg-black">
+      <div className="flex items-start justify-center flex-col gap-[50px] shadow-lg rounded-[12px] overflow-hidden p-[20px] bg-gray-900">
         <Link
           to={"/"}
-          className="text-primaryTxt font-[600] text-[18px] center gap-[5px]"
+          className="text-white font-[600] text-[18px] center gap-[5px]"
         >
           <FaArrowLeftLong /> Back To Home
         </Link>
-        <div className="flex items-center justify-center gap-[50px]">
+        <h1 className="text-4xl text-white font-bold">
+          Welcome to <span className="text-primaryMat">AutoSpa</span>
+        </h1>
+        <div className="flex items-center justify-center gap-[50px] mb-10">
           <div className="w-[500px] h-[450px]">
             <img
-              src={"/images/washer.png"}
+              src={"/images/washer.jpg"}
               alt="auth"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="bg-white max-w-[450px]">
-            <h2 className="font-bold mb-6 text-left text-[35px]">Login</h2>
+          <div className="bg-gray-900 max-w-[450px]">
+            <h2 className="font-bold mb-6 text-left text-[35px] text-white">
+              Login
+            </h2>
             <Formik
               initialValues={initialValues}
               validationSchema={validationSchema}
@@ -94,7 +99,7 @@ const Login = () => {
               {({ isSubmitting }) => (
                 <Form>
                   <div className="mb-4">
-                    <label className="block text-primaryTxt text-[18px] font-[600]">
+                    <label className="block text-white text-[18px] font-[600]">
                       Email
                     </label>
                     <Field
@@ -109,7 +114,7 @@ const Login = () => {
                     />
                   </div>
                   <div className="mb-4">
-                    <label className="block text-primaryTxt text-[18px] font-[600]">
+                    <label className="block text-white text-[18px] font-[600]">
                       Password
                     </label>
                     <Field
@@ -126,7 +131,7 @@ const Login = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-fit px-[15px] center gap-[8px] bg-primaryMat text-white py-[12px] hover:bg-green-600 rounded-[5px]"
+                    className="w-fit px-[15px] center gap-[10px] py-[12px] bg-primaryMat border-2 border-black hover:bg-black hover:border-2 hover:border-primaryMat hover:text-primaryMat rounded-[5px]"
                   >
                     Login <LogIn />
                   </button>
@@ -134,26 +139,28 @@ const Login = () => {
               )}
             </Formik>
             <div className="mt-6 text-start">
-              <p className="text-gray-700">
+              <p className="text-white">
                 Don&apos;t have an account?{" "}
                 <Link
                   to="/register"
                   className="text-primaryMat hover:underline"
                 >
+                  {" "}
                   Create Account
                 </Link>
               </p>
-              <p className="text-gray-700">
-                Dont remeber our password?
+              <p className="text-white">
+                Don't remember your password?
                 <Link
                   to="/forgot-password"
                   className="text-primaryMat hover:underline"
                 >
+                  {" "}
                   forgot password
                 </Link>
               </p>
             </div>
-            <p className="mt-4 text-gray-600 text-sm text-start">
+            <p className="mt-4 text-white text-sm text-start">
               Note: Your personal data will be used to support your experience
               throughout this website, to manage access to your account, and for
               other purposes described in our privacy policy.
