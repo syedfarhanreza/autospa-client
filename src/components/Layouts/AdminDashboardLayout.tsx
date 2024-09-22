@@ -11,9 +11,9 @@ const AdminDashboardLayout = () => {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <ThemeProvider defaultTheme="dark">
+    <ThemeProvider defaultTheme="light">
       <div className="w-full h-screen flex items-start justify-start pb-[30px]">
-        <Sidebar isOpen={isOpen} setIsopen={setIsOpen} />
+        <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
         <div className="w-full h-full flex-col flex">
           <DashboardHeader isOpen={isOpen} setIsOpen={setIsOpen} />
           <div className="h-full overflow-auto smoothBar">
