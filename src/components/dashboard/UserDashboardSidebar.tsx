@@ -56,7 +56,7 @@ const UserDashboardSidebar = () => {
             key={"profile" + i}
             className={`w-full md:w-[240px] border-[1px] border-borderColor py-[12px] rounded-[5px] flex items-center justify-start gap-[5px] font-[500] pl-[20px] ${
               path === href
-                ? "bg-primary/90 text-muted"
+                ? "bg-primary/90 text-white"
                 : "bg-white text-primaryTxt"
             }`}
           >

@@ -37,10 +37,10 @@ const Profile = () => {
           {user?.firstName} {user?.lastName}
         </h3>
       </div>
-      <p className="text-primaryTxt mt-[20px]">
+      <p className="text-white mt-[20px]">
         <span className="font-[600]">Email: </span> {user?.email}
       </p>
-      <p className="text-primaryTxt mt-[8px]">
+      <p className="text-white mt-[8px]">
         <span className="font-[600]">user since: </span>{" "}
         {format(new Date(user?.createdAt || "12-30-2024"), "MMM dd, yyy")}
       </p>

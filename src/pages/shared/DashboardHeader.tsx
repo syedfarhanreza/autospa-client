@@ -35,7 +35,7 @@ const DashboardHeader: React.FC<ISideBarState> = ({ setIsOpen }) => {
             <Avatar className="cursor-pointer">
               <AvatarImage src={user?.image || ""} alt="user avatar" />
               <AvatarFallback>
-                <p className="text-muted-foreground uppercase">
+                <p className="text-black font-bold uppercase">
                   {user?.firstName?.slice(0, 1)}
                   {user?.lastName?.slice(0, 1)}
                 </p>

@@ -178,7 +178,7 @@ const UpdateProfileInfo = () => {
 
             <Button
               type="submit"
-              className="bg-primaryMat text-white w-[100px]"
+              className="bg-primaryMat text-black font-bold border-2 border-black hover:bg-black hover:border-2 hover:border-primaryMat hover:text-primaryMat w-[100px]"
             >
               Submit
             </Button>

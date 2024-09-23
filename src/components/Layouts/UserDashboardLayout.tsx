@@ -7,8 +7,8 @@ const UserDashboardLayout = () => {
   return (
     <div>
       <Navbar />
-      <div className="w-full min-h-screen flex items-start justify-center layout_container py-[50px]">
-        <div className="min-h-[400px] overflow-auto flex flex-col md:flex-row items-start justify-start gap-[20px] md:p-[25px] rounded-[10px] shadow-md w-full">
+      <div className="w-full min-h-screen flex items-start justify-center layout_container py-[50px] bg-black">
+        <div className="min-h-[400px] text-white overflow-auto flex flex-col md:flex-row items-start justify-start gap-[20px] md:p-[25px] rounded-[10px] shadow-md w-full bg-gray-950">
           <UserDashboardSidebar />
           <Outlet />
         </div>

@@ -22,8 +22,8 @@ const RatingBar = ({ data }: { data: IReview[] }) => {
   const review = getRatingCounts(data);
   return (
     <>
-      {review.map(({ count, rating }) => (
-        <div className="flex items-center gap-2">
+      {review.map(({ count, rating }, index) => (
+        <div key={rating - index} className="flex items-center gap-2">
           <div className="w-8 text-sm font-medium">{rating}.0</div>
           <div className="flex-1 h-2 bg-secondary rounded-full overflow-hidden">
             <div

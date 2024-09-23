@@ -30,8 +30,8 @@ export function DashboardNav({ items }: DashboardNavProps) {
                 <Link
                   to={href}
                   className={cn(
-                    "flex items-center gap-2 overflow-hidden rounded-md py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground",
-                    path === href ? "bg-accent" : "transparent"
+                    "flex items-center gap-2 overflow-hidden rounded-md py-2 text-sm font-medium text-white hover:bg-gray-800 hover:text-white",
+                    path === href ? "bg-primaryMat text-black" : "bg-gray-950"
                   )}
                 >
                   <Icon className={`ml-3 size-5 flex-none`} />

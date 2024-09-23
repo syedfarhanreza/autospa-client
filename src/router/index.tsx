@@ -8,8 +8,8 @@ import { adminRoutes } from "./admin.route";
 import { authRoutes } from "./auth.route";
 import { pageRoutes } from "./pages.route";
 import { userRoutes } from "./user.route";
-import AuthLayout from "@/components/Layouts/AuthLayouts";
 import UserProtectedRoutes from "@/ProtectRoutes/UserProtectRoute";
+import AuthLayout from "@/components/Layouts/AuthLayout";
 const router = createBrowserRouter([
   {
     path: "/",

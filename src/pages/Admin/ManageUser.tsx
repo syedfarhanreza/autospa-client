@@ -35,10 +35,8 @@ const ManageUser = () => {
   return (
     <div className="px-4 py-8 sm:px-6">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold">User Management</h1>
-        <p className="text-muted-foreground">
-          Manage user roles and permissions.
-        </p>
+        <h1 className="text-2xl font-bold text-white">User Management</h1>
+        <p className="text-slate-300">Manage user roles and permissions.</p>
       </div>
 
       <div className="w-full flex items-center justify-between my-6">
@@ -87,24 +85,22 @@ const ManageUser = () => {
 
       {data?.data && data.data.length < 1 ? <NotFound /> : ""}
 
-      <div className="gap-4 gridUser_responsive">
+      <div className="gap-4 gridUser_responsive ">
         {searchTerm || page > 1 ? (
           ""
         ) : (
           <Card key={user?._id} className="border-[1px] border-muted">
-            <div className="flex items-center gap-4 p-4">
+            <div className="flex items-center gap-4 p-4  text-white">
               <Avatar className="h-12 w-12">
                 <AvatarImage src={user?.image} alt="John Doe" />
                 <AvatarFallback>{user?.firstName?.charAt(0)}</AvatarFallback>
               </Avatar>
               <div>
-                <div className="font-medium">
+                <div className="font-medium text-white">
                   {user?.firstName} {user?.lastName}
                 </div>
-                <div className="text-sm text-muted-foreground">
-                  {user?.email}
-                </div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-sm text-slate-300">{user?.email}</div>
+                <div className="text-sm text-slate-300 ">
                   Member since{" "}
                   {formatDistanceToNow(
                     new Date(user?.createdAt || "11-11-2022"),
@@ -135,7 +131,7 @@ const ManageUser = () => {
 
         {data?.data?.map((pay_user) => (
           <Card key={pay_user._id}>
-            <div className="flex items-center gap-4 p-4">
+            <div className="flex items-center gap-4 p-4 ">
               <Avatar className="h-12 w-12">
                 <AvatarImage src={pay_user.image} alt="John Doe" />
                 <AvatarFallback>{pay_user.firstName?.charAt(0)}</AvatarFallback>
@@ -144,10 +140,8 @@ const ManageUser = () => {
                 <div className="font-medium">
                   {pay_user.firstName} {pay_user.lastName}
                 </div>
-                <div className="text-sm text-muted-foreground">
-                  {pay_user.email}
-                </div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-sm text-slate-300">{pay_user.email}</div>
+                <div className="text-sm text-slate-300">
                   Member since{" "}
                   {formatDistanceToNow(new Date(pay_user.createdAt), {
                     addSuffix: false,

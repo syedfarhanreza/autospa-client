@@ -52,7 +52,7 @@ const HeroSection = () => {
         <CarouselContent className="flex">
           {sliderData.map((slider) => (
             <CarouselItem key={slider.id} className="min-w-full">
-              <Card className="bg-transparent rounded-none border-none shadow-none">
+              <Card className="bg-transparent bg-blend-overlay rounded-none border-none shadow-none">
                 <CardContent className="flex items-center justify-center h-full p-0 w-full">
                   <div
                     className="relative w-full lg:h-screen h-[400px] overflow-hidden"
@@ -78,13 +78,13 @@ const HeroSection = () => {
                       <div className="center gap-[10px]">
                         <Link
                           to={"/services"}
-                          className="center gap-[5px] px-[20px] py-[8px] md:px-[40px] md:py-[12px] rounded-full bg-primaryMat/80 text-white mt-[20px] text-[15px] md:text-[25px]"
+                          className="center gap-[5px] px-[20px] py-[8px] md:px-[40px] md:py-[12px] rounded-full bg-primaryMat text-black mt-[20px] text-[15px] md:text-[25px]"
                         >
                           Book a Slot <MdArrowForwardIos />
                         </Link>
                         <Link
                           to={"/"}
-                          className="center gap-[5px] px-[20px] py-[8px] md:px-[40px] md:py-[12px] rounded-full bg-white text-primaryMat mt-[20px] text-[15px] md:text-[25px]"
+                          className="center gap-[5px] px-[20px] py-[8px] md:px-[40px] md:py-[12px] rounded-full bg-white text-yellow-500 mt-[20px] text-[15px] md:text-[25px]"
                         >
                           Explore <MdArrowForwardIos />
                         </Link>

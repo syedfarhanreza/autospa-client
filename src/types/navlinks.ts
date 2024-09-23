@@ -27,9 +27,9 @@ export const adminLinks: NavItem[] = [
     title: "profile",
   },
   {
-    href: "/dashboard/kanban",
+    href: "/dashboard/ban",
     Icon: CiUser,
-    title: "kanban",
+    title: "ban",
   },
   {
     href: "/",

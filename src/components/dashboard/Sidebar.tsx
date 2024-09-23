@@ -78,7 +78,7 @@ export default function Sidebar({
         display: "flex",
       }}
       className={cn(
-        `md:relative fixed top-0 left-0  h-screen border-r bg-card transition-[width] duration-500 md:block
+        `md:relative fixed top-0 left-0  h-screen border-r bg-black transition-[width] duration-500 md:block
         w-72 shrink-0 overflow-hidden z-[9999] sidebar flex flex-col gap-[20px] justify-between pb-[20px]`,
         className
       )}
@@ -86,13 +86,13 @@ export default function Sidebar({
       <div className="w-full">
         <div className="hidden p-5 pt-10 lg:block">
           <Link to={"/"}>
-            <h3 className="font-[600] text-[20px]">AutoSpa</h3>
+            <h3 className="font-[800] text-[20px] text-primaryMat">AutoSpa</h3>
           </Link>
         </div>
 
         <ChevronLeft
           className={cn(
-            "fixed z-20 top-[40%] cursor-pointer rounded-full border bg-background text-3xl text-foreground md:flex hidden"
+            "fixed z-20 top-[40%] cursor-pointer rounded-full border bg-primaryMat text-3xl text-foreground md:flex hidden"
           )}
           style={{
             transition: "0.3s",
