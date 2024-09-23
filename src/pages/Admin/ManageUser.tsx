@@ -160,7 +160,7 @@ const ManageUser = () => {
         ))}
       </div>
 
-      <div className="w-full px-6 flex items-center justify-start gap-[10px] mt-6">
+      <div className="w-full px-6 flex items-center justify-start gap-[10px] mt-6 text-white">
         <p>Page:</p>
         <Pagination className="w-fit mx-0">
           <PaginationContent>

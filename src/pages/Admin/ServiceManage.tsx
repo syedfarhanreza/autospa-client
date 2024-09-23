@@ -29,6 +29,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { useGetServicesQuery } from "@/redux/features/service/service.api";
+
 import { trimText } from "@/utils/trimText";
 import { formatDistanceToNow } from "date-fns";
 import { ListOrderedIcon, SearchIcon } from "lucide-react";
@@ -47,9 +48,9 @@ const ServiceManage = () => {
   });
 
   return (
-    <div className="w-full bg-background">
+    <div className="w-full bg-black">
       <div className="my-6 px-6">
-        <h1 className="text-2xl font-bold">Service Management</h1>
+        <h1 className="text-2xl font-bold text-white  ">Service Management</h1>
         <p className="text-muted-foreground">Manage your services</p>
       </div>
       <div className="w-full flex items-center justify-between px-6 mt-6 flex-wrap gap-[20px]">
@@ -134,7 +135,7 @@ const ServiceManage = () => {
                       <TableCell>
                         <Badge
                           variant="outline"
-                          className="bg-green-100 text-green-800"
+                          className="bg-green-100 text-green-800 font-bold"
                         >
                           {duration} Min
                         </Badge>
@@ -164,7 +165,7 @@ const ServiceManage = () => {
           </CardContent>
         </Card>
       </main>
-      <div className="w-full px-6 flex items-center justify-start gap-[10px]">
+      <div className="w-full px-6 flex items-center justify-start gap-[10px] text-white">
         <p>Page:</p>
         <Pagination className="w-fit mx-0">
           <PaginationContent>

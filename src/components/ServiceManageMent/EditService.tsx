@@ -76,7 +76,11 @@ const EditService = ({ data }: { data: IService }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" size="icon" className="rounded-full">
+        <Button
+          variant="outline"
+          size="icon"
+          className="rounded-full bg-slate-900"
+        >
           <PencilIcon className="h-4 w-4" />
           <span className="sr-only">Edit</span>
         </Button>

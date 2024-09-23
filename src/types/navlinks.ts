@@ -14,26 +14,16 @@ export const adminLinks: NavItem[] = [
   {
     href: "/dashboard/admin/manage-user",
     Icon: CiUser,
-    title: "user",
+    title: "User",
   },
   {
     href: "/dashboard/admin/manage-slots",
     Icon: CiUser,
-    title: "employee",
+    title: "Employee",
   },
   {
     href: "/dashboard/admin",
     Icon: CiUser,
-    title: "profile",
-  },
-  {
-    href: "/dashboard/ban",
-    Icon: CiUser,
-    title: "ban",
-  },
-  {
-    href: "/",
-    Icon: CiUser,
-    title: "login",
+    title: "Profile",
   },
 ];

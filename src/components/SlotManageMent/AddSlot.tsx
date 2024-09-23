@@ -115,16 +115,18 @@ const AddSlot = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="default">Create New Slot</Button>
+        <Button className="bg-primaryMat text-black border-2 border-black hover:bg-black hover:border-2 hover:border-primaryMat hover:text-primaryMat">
+          Create New Slot
+        </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[500px]">
+      <DialogContent className="sm:max-w-[500px] bg-gray-950">
         <DialogHeader>
-          <DialogTitle>Create New Slot</DialogTitle>
+          <DialogTitle className="text-white">Create New Slot</DialogTitle>
           <DialogDescription>
             Fill out the details to create a new slot.
           </DialogDescription>
         </DialogHeader>
-        <form onSubmit={handleSubmit} className="grid gap-4 py-4">
+        <form onSubmit={handleSubmit} className="grid gap-4 py-4 text-white">
           <div className="grid gap-2">
             <Label htmlFor="service">Service</Label>
             <Select onValueChange={setService}>
@@ -147,9 +149,9 @@ const AddSlot = () => {
               <PopoverTrigger asChild>
                 <Button
                   variant="outline"
-                  className="w-full justify-start text-left font-normal"
+                  className="w-full justify-start text-left font-normal text-black"
                 >
-                  <CalendarDaysIcon className="mr-1 h-4 w-4 -translate-x-1" />
+                  <CalendarDaysIcon className="mr-1 h-4 w-4 -translate-x-1 " />
                   {date ? format(date, "MMM dd yyyy") : "Pick a date"}
                 </Button>
               </PopoverTrigger>
@@ -202,11 +204,18 @@ const AddSlot = () => {
           </div>
           <div className="flex justify-end gap-2">
             <DialogClose asChild>
-              <Button variant="outline" type="button" id="close_service">
+              <Button
+                variant="outline"
+                className="bg-gray-700"
+                type="button"
+                id="close_service"
+              >
                 Cancel
               </Button>
             </DialogClose>
-            <Button>Save</Button>
+            <Button className="bg-primaryMat text-black border-2 border-black hover:bg-black hover:border-2 hover:border-primaryMat hover:text-primaryMat">
+              Save
+            </Button>
           </div>
         </form>
       </DialogContent>

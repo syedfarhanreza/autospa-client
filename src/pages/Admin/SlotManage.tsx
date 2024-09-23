@@ -52,7 +52,7 @@ const SlotManage = () => {
   return (
     <div className="p-6">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold">Slot Management</h1>
+        <h1 className="text-2xl font-bold text-white">Slot Management</h1>
         <p className="text-muted-foreground">Manage slots to get booking</p>
       </div>
       <div className="w-full flex items-center justify-end my-6 gap-[10px]">
@@ -130,7 +130,7 @@ const SlotManage = () => {
           )}
         </CardContent>
       </Card>
-      <div className="w-full px-6 flex items-center justify-start gap-[10px]">
+      <div className="w-full px-6 flex items-center justify-start gap-[10px] text-white">
         <p>Page:</p>
         <Pagination className="w-fit mx-0">
           <PaginationContent>
