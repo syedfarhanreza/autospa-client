@@ -208,12 +208,12 @@ body {
   background-size: 20px 20px;
 }
 .skeleton {
-  background-color: #e0e0e0; /* Light grey color */
+  background-color: #e7fec3;
   background-image: linear-gradient(
     90deg,
-    #e0e0e0 0px,
-    #f0f0f0 40px,
-    #e0e0e0 80px
+    #b8f5b4 0px,
+    #98f789 40px,
+    #d3f86f 80px
   );
   background-size: 200px 100%;
   background-repeat: no-repeat;

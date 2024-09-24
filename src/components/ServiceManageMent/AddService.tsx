@@ -66,12 +66,15 @@ const AddService = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button size="sm" className="gap-2">
+        <Button
+          size="sm"
+          className="gap-2 bg-primaryMat text-black border-2 border-black hover:bg-black hover:border-2 hover:border-primaryMat hover:text-primaryMat"
+        >
           <PlusIcon className="h-4 w-4" />
           Add Service
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] bg-gray-950 text-white">
         <DialogHeader>
           <DialogTitle>Add New Service</DialogTitle>
           <DialogDescription>
@@ -98,7 +101,7 @@ const AddService = () => {
               <ErrorMessage
                 name="name"
                 component="div"
-                className="text-red-600 col-span-4"
+                className="text-red-500 col-span-4"
               />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
