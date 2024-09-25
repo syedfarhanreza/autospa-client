@@ -85,24 +85,12 @@ const FeaturedServices = () => {
                   </div>
                   <p className="text-white mb-6">{data.description}</p>
                   <ul className="space-y-2 mb-6">
-                    <li className="flex items-center">
-                      <CheckIcon className="h-5 w-5 text-primaryMat" />
-                      <span className="ml-2 text-white">Seats washing</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckIcon className="h-5 w-5 text-primaryMat" />
-                      <span className="ml-2 text-white">Vacuum cleaning</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckIcon className="h-5 w-5 text-primaryMat" />
-                      <span className="ml-2 text-white">
-                        Interior wet cleaning
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckIcon className="h-5 w-5 text-primaryMat" />
-                      <span className="ml-2 text-white">Window wiping</span>
-                    </li>
+                    {data.features.map((feature, index) => (
+                      <li key={index} className="flex items-center">
+                        <CheckIcon className="h-5 w-5 text-primaryMat" />
+                        <span className="ml-2 text-white">{feature}</span>
+                      </li>
+                    ))}
                   </ul>
                   <Button
                     className={`${

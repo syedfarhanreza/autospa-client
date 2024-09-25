@@ -12,7 +12,7 @@ const ServiceCard = ({ service }: { service: IService }) => {
         </div>
         <h3 className="text-xl font-semibold">{service.name}</h3>
       </div>
-      <p className="text-muted-foreground h-[48px] truncate overflow-hidden whitespace-pre-wrap">
+      <p className="text-slate-300 h-[48px] truncate overflow-hidden whitespace-pre-wrap">
         {service.description}...
       </p>
       <div className="grid sm:grid-cols-2 gap-4">
@@ -29,7 +29,7 @@ const ServiceCard = ({ service }: { service: IService }) => {
       </div>
       <Link
         to={`/service/${service._id}`}
-        className="w-full bg-primaryMat text-white hover:bg-primary py-[8px] text-center rounded-[8px]"
+        className="w-full text-black bg-primaryMat border-2 border-black hover:bg-black hover:border-2 hover:border-primaryMat hover:text-primaryMat py-[8px] text-center rounded-[8px]"
       >
         Book Now
       </Link>

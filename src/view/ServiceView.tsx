@@ -78,7 +78,7 @@ const ServiceView = () => {
   return (
     <div className="layout_container text-white bg-black mx-auto px-4 py-8 sm:px-6 md:py-12 min-h-[100vh]">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-[250px_1fr]">
-        <div className="space-y-6 bg-gray-900 p-10 rounded-md">
+        <div className="space-y-6 bg-gray-950 border-2 p-10 rounded-md">
           <div>
             <h3 className="mb-2 text-lg font-medium ">Search</h3>
             <Input

@@ -6,8 +6,10 @@ export type TFeaturedService = {
   duration: number;
   isDeleted: boolean;
   id: string;
+  features: string[];
 };
-export const serviceData = [
+
+export const serviceData: TFeaturedService[] = [
   {
     id: "101",
     name: "Exterior Detailing",
@@ -17,6 +19,7 @@ export const serviceData = [
     price: 70,
     duration: 45,
     isDeleted: false,
+    features: ["Hand washing", "Waxing", "Light scratch removal"], // Features added
   },
   {
     id: "202",
@@ -27,6 +30,11 @@ export const serviceData = [
     price: 180,
     duration: 90,
     isDeleted: false,
+    features: [
+      "Vacuum cleaning",
+      "Upholstery shampooing",
+      "Dashboard conditioning",
+    ],
   },
   {
     id: "303",
@@ -37,6 +45,11 @@ export const serviceData = [
     price: 120,
     duration: 60,
     isDeleted: false,
+    features: [
+      "Advanced tool diagnosis",
+      "Fault analysis",
+      "Repair recommendations",
+    ],
   },
   {
     id: "404",
@@ -47,6 +60,7 @@ export const serviceData = [
     price: 40,
     duration: 25,
     isDeleted: false,
+    features: ["Oil filter replacement", "Fluid level inspection"],
   },
   {
     id: "505",
@@ -57,6 +71,11 @@ export const serviceData = [
     price: 60,
     duration: 45,
     isDeleted: false,
+    features: [
+      "Battery health test",
+      "Performance analysis",
+      "Replacement recommendation",
+    ],
   },
   {
     id: "606",
@@ -67,5 +86,6 @@ export const serviceData = [
     price: 50,
     duration: 30,
     isDeleted: false,
+    features: ["Even wear", "Improved handling", "Better fuel efficiency"],
   },
 ];
