@@ -119,8 +119,9 @@ const Navbar = () => {
                 <img src="/images/logo.png" className="w-[120px]" />
               </Link>
               <div className="w-full flex flex-col mt-[20px]">
-                {navLinks.map(({ href, label }) => (
+                {navLinks.map(({ href, label }, i) => (
                   <NavLink
+                    key={i}
                     to={href}
                     className={({ isActive }) =>
                       `${

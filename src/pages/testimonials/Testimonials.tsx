@@ -13,12 +13,12 @@ import { format } from "date-fns";
 import { useState } from "react";
 
 const Testimonials = () => {
-  const [page, setPage] = useState(1);
+  const [page, setpage] = useState(1);
 
   const { data } = useGetReviewsQuery({ limit: 10, page });
 
   return (
-    <div className="layout_container py-[30px] min-h-screen bg-black">
+    <div className="layout_container py-[30px] min-h-screen">
       <div className="w-full h-[300px] md:h-[500px] bg-red-100 testimonial_bg rounded-[18px] center flex flex-col gap-[20px]">
         <SectionHeading
           description=""
@@ -34,17 +34,13 @@ const Testimonials = () => {
           );
 
           return (
-            <Card className="py-[8px] w-full bg-gray-900" key={_id}>
-              <CardContent className="w-full text-white">
+            <Card className="py-[8px] w-full" key={_id}>
+              <CardContent className="w-full">
                 <div className="flex justify-between items-start gap-[5px] w-full">
                   <div className="flex items-start justify-start gap-[10px]">
                     <Avatar className="h-12 w-12 border">
-                      <AvatarImage
-                        className="bg-white"
-                        src="/placeholder-user.jpg"
-                        alt="@shadcn"
-                      />
-                      <AvatarFallback className="text-black font-bold ">
+                      <AvatarImage src="/placeholder-user.jpg" alt="@shadcn" />
+                      <AvatarFallback>
                         {user.firstName?.charAt(0)}
                       </AvatarFallback>
                     </Avatar>{" "}
@@ -73,7 +69,7 @@ const Testimonials = () => {
               }).map((_, i) => (
                 <PaginationItem key={i + "page"}>
                   <PaginationLink
-                    onClick={() => setPage(i + 1)}
+                    onClick={() => setpage(i + 1)}
                     className={`${
                       page === i + 1
                         ? "bg-primary text-muted hover:bg-primary"

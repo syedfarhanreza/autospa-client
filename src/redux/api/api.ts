@@ -9,7 +9,7 @@ import Cookies from "js-cookie";
 import { setState, setToken, setUser } from "../features/auth/auth.slice";
 import { RootState } from "../store";
 
-export const baseUrl = "http://localhost:5000/api";
+export const baseUrl = import.meta.env.VITE_BASE_API as string;
 
 const baseQuery = fetchBaseQuery({
   baseUrl: baseUrl,
