@@ -94,11 +94,11 @@ const UpdateProfileInfo = () => {
       >
         {({ setFieldValue }) => (
           <Form>
-            <div className="grid gap-2">
+            <div className="grid gap-2 text-white">
               <div className="flex items-center gap-2">
                 <Label
                   htmlFor={"image"}
-                  className="w-[120px] h-[120px] rounded-full overflow-hidden bg-[whitesmoke] relative group/profile border-[1px] border-borderColor p-[3px]"
+                  className="w-[120px] h-[120px]  rounded-full overflow-hidden bg-[whitesmoke] relative group/profile border-[1px] border-borderColor p-[3px]"
                 >
                   <img
                     src={profileUrl}
@@ -144,7 +144,7 @@ const UpdateProfileInfo = () => {
                 as={Input}
                 type="text"
                 name="firstName"
-                className="mt-1 block w-full px-3 py-2 border border-borderColor rounded-md outline-none"
+                className="mt-2 text-black block w-full px-3 py-2 border border-borderColor rounded-md outline-none"
               />
               <ErrorMessage
                 name="firstName"
@@ -159,7 +159,7 @@ const UpdateProfileInfo = () => {
                 type="text"
                 as={Input}
                 name="lastName"
-                className="mt-1 block w-full px-3 py-2 border border-borderColor rounded-md outline-none"
+                className="mt-1 text-black block w-full px-3 py-2 border border-borderColor rounded-md outline-none"
               />
               <ErrorMessage
                 name="lastName"
@@ -172,7 +172,7 @@ const UpdateProfileInfo = () => {
               <Input
                 readOnly
                 value={user?.email}
-                className="mt-1 block w-full px-3 py-2 border border-borderColor rounded-md outline-none bg-[whitesmoke] cursor-not-allowed"
+                className="mt-1 text-black block w-full px-3 py-2 border border-borderColor rounded-md outline-none bg-[whitesmoke] cursor-not-allowed"
               />
             </div>
 
