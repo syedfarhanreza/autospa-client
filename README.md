@@ -44,7 +44,7 @@ Make sure you have the following software installed on your machine:
 Clone the project repository with the following command:
 
 ```
-git clone https://github.com/syedfarhanreza/autospa-client
+git clone https://github.com/syedfarhanreza/autospa-client.git
 
 ```
 
