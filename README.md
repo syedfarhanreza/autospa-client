@@ -4,15 +4,15 @@
 
 ## 🔗 Server side repository - [auto-spa-server](https://github.com/syedfarhanreza/autospa-server)
 
-## Admin access 
- user: admin@admin.com
- password: admin
+## Admin Access 
+ -user: admin@admin.com
+ -password: admin
 
 ## Introduction
 
 The AutoSpa car wash and service booking platform allows users to explore various car maintenance services and schedule convenient time slots for their vehicle care. Users can easily select their desired services, book appointments, and manage upcoming bookings. Administrators can oversee user roles, manage available slots based on services, and handle all bookings efficiently.
 
-This guide will help you set up the project and run it locally on your machine.
+This guide will help you set up and run the project locally on your machine.
 
 ## Features
 
