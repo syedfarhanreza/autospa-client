@@ -86,7 +86,7 @@ const AddService = () => {
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
-          <Form className="grid gap-4 py-4">
+          <Form className="grid gap-4 py-4 ">
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="name" className="text-right">
                 Name
@@ -96,7 +96,7 @@ const AddService = () => {
                 id="name"
                 name="name"
                 placeholder="Enter service name"
-                className="col-span-3"
+                className="col-span-3 text-black"
               />
               <ErrorMessage
                 name="name"
@@ -113,7 +113,7 @@ const AddService = () => {
                 id="description"
                 name="description"
                 placeholder="Enter service description"
-                className="col-span-3"
+                className="col-span-3 text-black"
               />
               <ErrorMessage
                 name="description"
@@ -130,7 +130,7 @@ const AddService = () => {
                 id="duration"
                 name="duration"
                 type="number"
-                className="col-span-3"
+                className="col-span-3 text-black"
               ></Field>
               <ErrorMessage
                 name="duration"
@@ -148,7 +148,7 @@ const AddService = () => {
                 name="price"
                 type="number"
                 placeholder="Enter service price"
-                className="col-span-3"
+                className="col-span-3 text-black"
               />
               <ErrorMessage
                 name="price"
@@ -158,11 +158,21 @@ const AddService = () => {
             </div>
             <DialogFooter>
               <DialogClose asChild>
-                <Button type="button" variant="outline" id="close_service">
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="bg-gray-400"
+                  id="close_service"
+                >
                   Cancel
                 </Button>
               </DialogClose>
-              <Button type="submit">Save Service</Button>
+              <Button
+                type="submit"
+                className="bg-primaryMat text-black border-2 border-black hover:bg-black hover:border-2 hover:border-primaryMat hover:text-primaryMat"
+              >
+                Save Service
+              </Button>
             </DialogFooter>
           </Form>
         </Formik>
